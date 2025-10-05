@@ -1,0 +1,197 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 80%;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    max-width: 80%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.quote {
+    margin: 0;
+    font-style: italic;
+    color: #666;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        max-width: 120%;
+        max-height: 100vh;
+    }
+}
+
+/* Styles for sticky header on mobile */
+@media (max-width: 767px) {
+    .sticky-header {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+        z-index: 1000;
+    }
+
+    .sticky-header.scrolled {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .sticky-header .logo-link {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sticky-header .logo-link img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    main {
+        padding-top: 0;
+    }
+}
+
+/* Privacy Policy and Terms & Conditions Styles */
+.policy-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.policy-main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.policy-main h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.policy-main p {
+    margin-bottom: 1rem;
+}
+
+.policy-main ul, .policy-main ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.policy-main li {
+    margin-bottom: 0.5rem;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 2rem;
+}
+
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+.last-modified {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+    .logo-container {
+        display: none;
+    }
+}
